@@ -94,7 +94,7 @@ with st.spinner("正在取得最新匯率..."):
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 st.write(f"**目前 TWD/USD 匯率：** {twd_usd}（{twd_usd_bank}）")
 st.write(f"**目前 TWD/THB 匯率：** {twd_thb}（{twd_thb_bank}）")
-st.write(f"**更新時間：** {current_time}")
+st.write(f"**更新時間：** {current_time} (GMT+8)")
 
 st.divider()
 
@@ -102,11 +102,11 @@ st.divider()
 col1, col2 = st.columns(2)
 
 with col1:
-    twd_thb_superrich = safe_float(st.text_input("SuperRich TWD/THB 匯率", value="0.97"))
+    twd_thb_superrich = safe_float(st.text_input("SuperRich TWD/THB 匯率", value=""))
     fee = safe_int(st.text_input("手續費（NTD）", value="15"))
 
 with col2:
-    usd_thb_superrich = safe_float(st.text_input("SuperRich USD/THB 匯率", value="34.5"))
+    usd_thb_superrich = safe_float(st.text_input("SuperRich USD/THB 匯率", value=""))
     spend = safe_int(st.text_input("預計換多少台幣", value="10000"))
 
 # 計算按鈕
