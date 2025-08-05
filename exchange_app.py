@@ -60,8 +60,8 @@ def safe_int(val):
 
 twd_thb_superrich = safe_float(st.text_input("SuperRich TWD/THB 匯率", ""))
 usd_thb_superrich = safe_float(st.text_input("SuperRich USD/THB 匯率", ""))
-fee = safe_int(st.text_input("手續費（NTD，不可小數）", "15"))
-spend = safe_int(st.text_input("預計換多少台幣（NTD，不可小數）", "10000"))
+fee = safe_int(st.text_input("手續費（NTD）", "15"))
+spend = safe_int(st.text_input("預計換多少台幣", "10000"))
 
 # 計算按鈕
 if st.button("計算"):
@@ -81,4 +81,4 @@ if st.button("計算"):
     st.write(f"方法1 比在台灣換多：**{output3:.2f} THB**")
     st.write(f"方法2 比在台灣換多：**{output4:.2f} THB**")
     st.write(f"-----------------------------------------------------------")
-    st.markdown(f"<h3>方法2 比方法1 多賺：<b>{difference:.2f} THB</b></h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3>方法2 比 方法1 多賺：\n<b>{difference:.2f} THB</b></h3>", unsafe_allow_html=True)
