@@ -81,4 +81,4 @@ if st.button("計算"):
     st.write(f"方法1 比在台灣換多：**{output3:.2f} THB**")
     st.write(f"方法2 比在台灣換多：**{output4:.2f} THB**")
     st.write(f"-----------------------------------------------------------")
-    st.markdown(f"<h3>方法2 比 方法1 多賺：\n<b>{difference:.2f} THB</b></h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3>方法2 比 方法1 多賺：<b>{difference:.2f} THB</b></h3>", unsafe_allow_html=True)
