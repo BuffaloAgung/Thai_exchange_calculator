@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import streamlit as st
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 # 頁面設定
 st.set_page_config(
@@ -91,7 +91,8 @@ with st.spinner("正在取得最新匯率..."):
     twd_thb_bank, twd_thb = get_twd_thb()
 
 # 顯示當前匯率
-current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+gmt8 = timezone(timedelta(hours=8))
+current_time = datetime.now(gmt8).strftime("%Y-%m-%d %H:%M:%S")
 st.write(f"**目前 TWD/USD 匯率：** {twd_usd}（{twd_usd_bank}）")
 st.write(f"**目前 TWD/THB 匯率：** {twd_thb}（{twd_thb_bank}）")
 st.write(f"**更新時間：** {current_time} (GMT+8)")
