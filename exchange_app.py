@@ -75,10 +75,10 @@ if st.button("計算"):
 
     # 結果
     st.subheader("📊 計算結果")
-    st.write(f"方法1 - 在泰國換泰銖：           **{exchange_in_Thai:.3f} THB**")
-    st.write(f"方法2 - 在台灣換美元再換泰銖：    **{exchange_twice:.3f} THB**")
+    st.write(f"方法1 - 在泰國換泰銖：           **{exchange_in_Thai:.2f} THB**")
+    st.write(f"方法2 - 在台灣換美元再換泰銖：    **{exchange_twice:.2f} THB**")
     st.write(f"-----------------------------------------------------------")
-    st.write(f"方法1 比在台灣換多：**{output3:.3f} THB**")
-    st.write(f"方法2 比在台灣換多：**{output4:.3f} THB**")
+    st.write(f"方法1 比在台灣換多：**{output3:.2f} THB**")
+    st.write(f"方法2 比在台灣換多：**{output4:.2f} THB**")
     st.write(f"-----------------------------------------------------------")
-    st.write(f"方法2 比方法1 多賺：**{difference:.3f} THB**")
+    st.markdown(f"<h3>方法2 比方法1 多賺：<b>{difference:.2f} THB</b></h3>", unsafe_allow_html=True)
